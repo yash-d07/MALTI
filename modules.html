@@ -1,0 +1,244 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <title> MALTI TOOL</title>
+
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+</head>
+
+<body>
+
+    <!--####################### Header Starts Here ###################-->
+    <div class="header-container">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i> upes@maltitool.com</li>
+                            <li class="d-none d-sm-block"><i class="fas fa-phone-square"></i> +123 456 789 000</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+                            <li><a href=""><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/groups/10411920/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://in.pinterest.com/prabnr/pins/"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="https://twitter.com/prabinraja89"><i class="fab fa-twitter"></i></a></li>
+                            <li> <a href="https://www.facebook.com/freewebtemplatesbysmarteye"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <nav id="menu-jk" class="container-fluid  no-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 logo">
+                        <img class="log" src="{% static 'assets/images/logo.gif' %}" alt="">
+                        <img class="log-gray" src="{% static 'assets/images/logo-gray.jpg' %}" alt="">
+                        <a data-toggle="collapse" data-target="#nav-head" href="#nav-head"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="nav-head" class="col-md-9 nav-div d-none d-md-block">
+                        <ul>
+                            <li><a class="js-scroll-trigger" href="index.html">Home</a></li>
+                            <li><a class="js-scroll-trigger" href="about_us.html">About Us</a></li>
+                            {% if user.is_authenticated %}
+								<li>Hello, {{user.first_name}}</li>
+								<li><a href="accounts/logout">Logout</a></li>
+							{% else %}
+								<li><a href="accounts/login">Login</a></li>
+							{% endif %}<li><a class="js-scroll-trigger" href="service.html">Services</a></li>
+                            <li><a class="js-scroll-trigger" href="modules.html">Modules</a></li>
+                            <li><a class="js-scroll-trigger" href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--###################### Page Title Starts Here ############################-->
+
+    <div class="page-title titl-2">
+        <div class="container">
+            <div class="row">
+                <h2>Modules</h2>
+                <p> Home <i class="fas fa-angle-double-right"></i> Modules </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  ************************* Module Starts Here ************************** -->
+
+
+    <section class="our-blog">
+        <div class="container">
+
+            <div class="blog-row row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/email.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>Email Validation</h4>
+                            <p>This module will allows you to verify whether an email address is legitimate or not. Meanwhile, it involves checking the spell formatting, syntax, of your emails.</p>
+                            <div class="link">
+                                <a href="modules/email_validation"> Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/file.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>File Validation</h4>
+                            <p>This module allows you to upload files and then uses several antivirus scanners to check if it contains any kind of malicious content like Viruses, Trojans, Worms or more.</p>
+                            <div class="link">
+                                <a href="modules/file_validation">Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/phone.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>Phone Number Validation</h4>
+                            <p>This module will allow you to check if a phone number is valid or not and also gives some details like location, country code, format, and more. </p>
+                            <div class="link">
+                                <a href="modules/phone_validation">Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/url.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>URL Validation </h4>
+                            <p>This module will allow you to get automatic validation that the entered text is at least in the correct form to potentially be a legitimate URL.</p>
+                            <div class="link">
+                                <a href="modules/url_validation">Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/ip.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>IP Validation</h4>
+                            <p>This module will allow you to check for a valid IP Address and also provides sensitive data such as IP Address type, Country code, ZIP, City, Region Code, Region Name, Latitude and Longitude.</p>
+                            <div class="link">
+                                <a href="modules/ip_validation">Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <figure>
+                            <img src="{% static 'assets/images/blog/file_behavior.jpg' %}" alt="">
+                        </figure>
+                        <div class="blog-detail">
+                            <h4>File Behavioral Analysis</h4>
+                            <p> This module will allow you to perform behavioral analysis of a file and then returns a detailed summary which consists of Imports, Mutexes, Modules Loaded, Processes and Registry Keys. </p>
+                            <div class="link">
+                                <a href="modules/file_behavioral">Click Here </a><i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--####################### footer Starts Here ###################-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Malti Tool was founded in the year 2022 as a free service that detects and then validates the suspicious files, URLs, Emails, Phone Numbers for different types of malware and malicious content using APIs (Application Programming Interfaces) and website
+                        scanners.
+                    </p>
+                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        UPES College <br>
+                        Dehradun <br>
+                        Uttarakhand, India <br>
+                        Phone: +91 919676xxxxx <br>
+                        Email: <a href="mailto:info@anybiz.com" class="">info@malti.in</a><br>
+                        Web: <a href="smart-eye.html" class="">www.maltitool.in</a>
+                    </address>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved | Designed and Developed by Fantastic Four</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+        </span>
+        </div>
+
+    </div>
+
+</body>
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+
+</html>

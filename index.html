@@ -1,0 +1,285 @@
+{% load static%}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+    <title> MALTI TOOL</title>
+
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.jpg' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+</head>
+
+<body>
+
+    <!--####################### Header Starts Here ###################-->
+    <div class="header-container">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i> upes@maltitool.com</li>
+                            <li class="d-none d-sm-block"><i class="fas fa-phone-square"></i> +123 456 789 000</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+                            <li><a href=""><i class="fab fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/groups/10411920/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://in.pinterest.com/prabnr/pins/"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="https://twitter.com/prabinraja89"><i class="fab fa-twitter"></i></a></li>
+                            <li> <a href="https://www.facebook.com/freewebtemplatesbysmarteye"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <nav id="menu-jk" class="container-fluid  no-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 logo">
+                        <img class="log" src="{% static 'assets/images/logo.gif' %}" alt="">
+                        <img class="log-gray" src="{% static 'assets/images/logo-gray.jpg' %}" alt="">
+                        <a data-toggle="collapse" data-target="#nav-head" href="#nav-head"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="nav-head" class="col-md-9 nav-div d-none d-md-block">
+                        <ul>
+                            <li><a class="js-scroll-trigger" href="index.html">Home</a></li>
+                            <li><a class="js-scroll-trigger" href="about_us.html">About Us</a></li>
+                            {% if user.is_authenticated %}
+								<li>Hello, {{user.first_name}}</li>
+								<li><a href="accounts/logout">Logout</a></li>
+							{% else %}
+								<li><a href="accounts/login">Login</a></li>
+							{% endif %}
+                            <li><a class="js-scroll-trigger" href="service.html">Services</a></li>
+                            <li><a class="js-scroll-trigger" href="modules.html">Modules</a></li>
+                            <li><a class="js-scroll-trigger" href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!--####################### Slider Starts Here ###################-->
+    <div id="home" class="banner-container no-padding">
+        <div class="container">
+            <div class="row mx-auto">
+
+            </div>
+            <div class="slider-det">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <span>VALUES</span>
+                            <h2>Service | Transparency | Ethics | Politeness | Sustainability</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h2><i>No Technology That's Connected to the Internet Is UnHackable</i></h2>
+                            <p> - Abhijit Naskar</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h2><i>If Security were all that mattered computers would never be turned on, let alone hooked into a network with literally millions of potential intruders.</i></h2>
+                            <p> - Dan Farmer</p>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--####################### About Starts Here ###################-->
+    <div class="about-us-cotainer container-fluid">
+        <div class="container">
+            <div class="row">
+                <h3>About Us</h3>
+                <p>Malti Tool was founded in the year 2022 as a free service that detects and then validates the suspicious files, URLs, Emails, Phone Numbers for different types of malware and malicious content using APIs (Application Programming Interfaces)
+                    and website scanners.</p>
+                <img src="{% static 'assets/images/about.jpg' %}" alt="">
+                <p>This tool provides several features such as upload and scan files, submit and scan URLs, access finished reports, etc. Our goal is to make Internet a safer place through collaboration between members of the antivirus industry, researchers
+                    and end users of all kinds. </p>
+            </div>
+        </div>
+    </div>
+    <!--####################### Count Starts Here ###################-->
+    <div class="doctor-message">
+        <div class="inner-lay">
+            <div class="container">
+                <div class="row session-title">
+                    <h2><i>LARGE VOLUMES OF DATA</i></h2>
+                    <p>We can talk for a long time about advantages of our Malti Tool for the security of end users. But you can read the following facts in order to make sure of all the pluses of our web application:</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 numb">
+                        <h3>70+</h3>
+                        <span>ANTIVIRUS SCANNERS</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>100+</h3>
+                        <span>USERS</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>Google</h3>
+                        <span>Powered by Google Infrastructure</span>
+                    </div>
+                    <div class="col-sm-3 numb">
+                        <h3>15+</h3>
+                        <span>FILE FEEDS</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--####################### Services Starts Here ###################-->
+    <section class="service-container container-fluid">
+        <div class="container">
+            <div class="row inner-title">
+                <h2>Our Services</h2>
+                <p>Take a look at our Services</p>
+            </div>
+            <div class="row service-row">
+                <div class="col-md-3">
+                    <div class="service-col">
+                        <i class="fas fa-users"></i>
+                        <h6>Expert Team</h6>
+                        <p>A well-qualified and professional team of security officials who have wide experience in high level vigilance in security areas. </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service-col">
+                        <i class="fas fa-phone-volume"></i>
+                        <h6>24 x 7 Support</h6>
+                        <p>Providing support 24 hours a day, 7 days a week. </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service-col">
+                        <i class="fas fa-globe-asia"></i>
+                        <h6>Online Support</h6>
+                        <p>All time presence of Customer Support Agents to solve queries of customers via the Internet. </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service-col">
+                        <i class="fas fa-sitemap"></i>
+                        <h6>Mission</h6>
+                        <p> Committed To Providing Simple, Responsive and Innovative Security Solutions </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--####################### Quote Starts Here ###################-->
+    <div class="doctor-message">
+        <div class="inner-lay">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-6 col-sm-12 doc-img">
+                        <img src="{% static 'assets/images/doctt.png' %}" alt="">
+                    </div>
+                    <div class="col-md-6 col-sm-12 doc-det">
+                        <h2>Hello, We are Fantastic Four</h2>
+                        <span></span>
+
+                        <p>We as a team believe that we are only as good as the good we do. Thus, we would always try to redefine the security with world's most advanced cyber security platform that protects and enables the people, processes and technologies
+                            that drive modern enterprises. Together, we try to drive progress through meaningful innovation and action. </p>
+
+                        <h4>Call us on : +123 456 789 000</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--####################### Team Starts Here ###################-->
+    <section class="our-team">
+
+
+    </section>
+
+    <!--####################### Clients Starts Here ###################-->
+    <div class="cotainer-fluid container-client">
+        <div class="container">
+        </div>
+    </div>
+
+    <!--####################### footer Starts Here ###################-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Malti Tool was founded in the year 2022 as a free service that detects and then validates the suspicious files, URLs, Emails, Phone Numbers for different types of malware and malicious content using APIs (Application Programming Interfaces) and website
+                        scanners.
+                    </p>
+                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        UPES College <br>
+                        Dehradun <br>
+                        Uttarakhand, India <br>
+                        Phone: +91 919676xxxxx <br>
+                        Email: <a href="mailto:info@anybiz.com" class="">info@malti.in</a><br>
+                        Web: <a href="smart-eye.html" class="">www.maltitool.in</a>
+                    </address>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="copy">
+        <div class="container">
+            <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved | Designed and Developed by Fantastic Four</a>
+
+            <span>
+                <a><i class="fab fa-github"></i></a>
+                <a><i class="fab fa-google-plus-g"></i></a>
+                <a><i class="fab fa-pinterest-p"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+        </span>
+        </div>
+
+    </div>
+
+</body>
+<script src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+
+</html>
